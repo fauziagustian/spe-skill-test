@@ -24,6 +24,10 @@ func main() {
 	fmt.Println(parityOutlier(ex3))
 
 	fmt.Println("====================")
+	//nomor 3 NEEDLE IN THE HAYSTACK
+	fmt.Println("NEEDLE IN THE HAYSTACK")
+	v1 := []string{"red", "blue", "yellow", "black", "grey"}
+	fmt.Printf("%v", findNeedle(v1, "blue"))
 }
 
 func narcissistic(x int) bool {
@@ -86,4 +90,17 @@ func parityOutlier(x []int) string {
 	} else {
 		return "false"
 	}
+}
+
+func findNeedle(x []string, find string) []string {
+
+	var result []string
+
+	for _, v := range x {
+		if v == find {
+			result = append(result, v)
+		}
+	}
+
+	return result
 }
