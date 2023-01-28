@@ -28,6 +28,12 @@ func main() {
 	fmt.Println("NEEDLE IN THE HAYSTACK")
 	v1 := []string{"red", "blue", "yellow", "black", "grey"}
 	fmt.Printf("%v", findNeedle(v1, "blue"))
+
+	fmt.Println("====================")
+	//nomor 4 NEEDLE IN THE HAYSTACK
+	fmt.Println("blue ocean ")
+	b1 := []int{1, 2, 3, 4, 6, 10}
+	fmt.Printf("%v", blueOceanReverse(b1, 1))
 }
 
 func narcissistic(x int) bool {
@@ -100,6 +106,20 @@ func findNeedle(x []string, find string) []string {
 		if v == find {
 			result = append(result, v)
 		}
+	}
+
+	return result
+}
+
+func blueOceanReverse(x []int, y int) []int {
+
+	var result []int
+
+	for _, v := range x {
+		if v != y {
+			result = append(result, v)
+		}
+
 	}
 
 	return result
